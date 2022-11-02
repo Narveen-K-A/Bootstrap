@@ -1,91 +1,87 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/formboot.css">             
-        	<title>On boarding form</title>
-    	</head>
-    	<body>
-        	<div class="container">
-            		<form class="form" id="formvalidate" name="form" action="" method="post">
-				<div class="heading">
-					<h1>On boarding form</h1>
-				</div>
-				<div>
-					<h3>Personal details:</h3>
-				</div>
-				<div class="formcontrol">
-                			<label for="fname">Full name:</label>
-  					<input class="formwidth" type="text" id="fname" name="fname">
-				</div>
-				<div class="formcontrol">
-                			<label for="email">E mail:</label>
-                			<input class="formwidth" type="email" name="email" id="email">
-				</div>
-				<div class="formcontrol">
-					<label for="phone">Phone number:</label>
-  					<input class="formwidth" type="tel" id="phone" name="phone">
-				</div>
-				<div class="formcontrol">
-  					<label for="password">Password for job account:</label>
-  					<input class="formwidth" type="password" id="password" name="password">
-				</div>
-				<div class="formcontrol">
-					<label for="birthdaytime">Birthday (date and time):</label>
-  					<input class="formwidth" type="datetime-local" id="birthdaytime" name="birthdaytime">
-				</div>
-				<div class="formcontrol">
-					<label for="state">State: </label>
-					<select class="width" name="state" id="state">
-						<option value=""></option>
-                				<option value="Kerala">Kerala</option>
-                				<option value="Tamilnad">Tamilnad</option>
-                				<option value="Karnataka">Karnataka</option>
-						<option value="Andhrapradhesh">Andhra pradhesh</option>
-                			</select>
-				</div>
-				<div class="formcontrol">
-					<div>Address:</div>
-                			<label for="address"></label>
-                			<textarea name="address" id="address" cols="65" rows="10"></textarea>
-				</div>
-				<div class="formcontrol">
-					<div class="formcontrol">
-						Gender:
-					</div>
-					<div>
-                				<input type="radio" name="gender" id="male">
-                				<label for="male">Male</label>
-                				<input type="radio" name="gender" id="female">
-                				<label for="female">Female</label>
-                				<input type="radio" name="gender" id="other">
-                				<label for="other">Other</label>
-					</div>
-				</div>
-				<div class="formcontrol">
-					<label for="quantity">How many programming languages you know:</label>
-  					<input class="formwidth" type="number" id="quantity" name="quantity">
-				</div>
-				<div class="formcontrol">
-					<label for="homepage">Add your homepage:</label>
-  					<input class="formwidth" type="url" id="homepage" name="homepage">
-				</div>
-				<div>
-                			<h3>Cerificates:</h3>
-				</div>
-				<div class="formcontrol">
-                			<label for="file">Upload your highest qualification certificte or experience certificate:</label>
-                			<input class="formwidth" type="file" name="file" id="file">
-				</div>
-				<div class="display">
-                			<input class="button" type="submit" value="Submit">
-  					<input class="button" type="reset">
-				</div>
-            		</form>
-        	</div>
-		<script src="assets/jquery.min.js"></script>
-		<script src="assets/jquery.validate.min.js"></script>
-                <script src="js/formboot.js"></script>
-    	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="css/formboot.css">
+    <title>Form validation</title>
+</head>
+<body>
+    <div class="container">
+        <form id="formvalidate" action="" method="post">
+            <div class="h1 mt-3 d-flex  justify-content-center">On boarding form</div>
+            <div class="validation mb-3 mt-3">
+                <label for="fname" class="form-label">Full name:</label>
+                <input type="text" class="form-control" id="fname" name="fname">
+            </div>
+            <div class="validation mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="validation mb-3">
+                <label for="phone" class="form-label">Phone number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="validation mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="validation mb-3">
+                <label for="birthdaytime" class="form-label">Birthday (date and time):</label>
+                <input type="datetime-local" class="form-control" id="birthdaytime" name="birthdaytime">
+            </div>
+            <div class="validation mb-3">
+                <label for="state">State: </label>
+                <select class="form-control" name="state" id="state">
+                    <option value=""></option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Tamilnad">Tamilnad</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhrapradhesh">Andhra pradhesh</option>
+                </select>
+            </div>
+            <div class="validation mb-3">
+                <div>Address:</div>
+                <label for="address"></label>
+                <textarea name="address" id="address" class="form-control"></textarea>
+            </div>
+            <div class="validation mb-3">
+                <div>Gender</div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="male" name="gender" value="Male">Male
+                    <label class="form-check-label" for="male"></label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="female" name="gender" value="Female">Female
+                    <label class="form-check-label" for="female"></label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="other" name="gender" value="Other">Other
+                    <label class="form-check-label" for="other"></label>
+                </div>
+            </div> 
+            <div class="validation mb-3">
+                <label for="quantity">How many programming languages you know:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity">
+            </div>
+            <div class="validation mb-3">
+                <label for="homepage">Add your homepage:</label>
+                <input type="url" class="form-control" id="homepage" name="homepage">
+            </div>
+            <div class="validation mb-3">
+                <label for="file">Upload your highest qualification certificte or experience certificate:</label>
+                <input type="file" class="form-control" id="file" name="file">
+            </div>
+            <div class="validation mb-3">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>      
+    </div>
+	<script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery.validate.min.js"></script>
+	<script src="js/formboot.js"></script>
+</body>
 </html>

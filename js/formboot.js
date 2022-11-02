@@ -50,7 +50,7 @@ $(document).ready(function(){
 		},
 		errorPlacement: function(error, element) {
 			if ( element.is(":radio") ) {
-				error.appendTo( element.parents(".formcontrol") );
+				error.appendTo( element.parents(".validation") );
 			}
 			else { 
 				error.insertAfter( element );
